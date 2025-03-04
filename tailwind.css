@@ -1,0 +1,462 @@
+
+/* General styling for the body, setting font, background color, text color, and alignment */
+body {
+    @apply m-0 p-0 bg-orange-100 text-red-900 text-center;
+  }
+/* Header styling */
+header {
+    @apply bg-orange-900 p-4 text-white;
+  }
+/* Header title styling */
+header h1 {
+    @apply text-4xl font-serif text-white font-bold uppercase tracking-wide transition-transform duration-300 ease-in-out;
+  }
+
+
+  header h1:hover {
+    @apply scale-105;
+  }
+  
+/* Navigation styling */
+nav ul {
+    @apply list-none p-0;
+  }
+  
+
+  nav ul li {
+    @apply inline mx-4 text-lg;
+  }
+  
+
+  nav ul li a {
+    @apply text-white no-underline;
+  }
+  
+/* Hero section styling */
+.hero {
+    @apply relative w-full min-h-[80vh] overflow-hidden flex flex-col justify-center items-center text-center text-white;
+  }
+  
+
+  .hero-content {
+    @apply relative px-10 py-5 rounded-lg inline-block;
+  }
+  
+
+  .hero-content::before {
+    @apply absolute top-[-8px] left-[-8px] right-[-8px] bottom-[-8px] rounded-2xl border-2 border-[rgba(255,255,255,0.034)] shadow-[0_0_15px_rgba(41,40,40,0.034)] backdrop-blur-[12px] z-[-1];
+  }
+  
+/* Background animation for hero section */
+.hero::before {
+    @apply absolute top-0 left-0 w-full h-full min-h-[80vh] bg-cover bg-center bg-no-repeat z-[-2];
+    background-image: url('vineyard.jpg');
+    animation: changeBackground 30s infinite;
+  }
+  
+
+/* Hero h2 */
+.hero h2 {
+    @apply text-5xl p-4 rounded-lg block w-max mx-auto transition-all duration-300 font-serif text-white;
+}
+
+/* Hero p */
+.hero p {
+    @apply text-xl p-4 rounded-lg block w-max mx-auto transition-all duration-300 font-serif;
+}
+
+/* Button styling */
+.hero .btn {
+    @apply inline-block py-2 px-4 bg-[#8b0000] text-white no-underline rounded-md m-2;
+}
+
+.hero .btn.book-btn {
+    @apply ml-5;
+}
+
+.btn {
+    @apply inline-block py-2 px-4 bg-[#8b0000] text-white no-underline rounded-md;
+}
+
+/* Wine list section */
+.wine-list {
+    @apply flex flex-wrap justify-center gap-5 mt-5;
+}
+
+/* .wine */
+.wine {
+    @apply bg-white p-4 rounded-lg shadow-lg w-[250px] min-h-[400px] flex flex-col justify-between;
+}
+
+/* #wines h2 */
+#wines h2 {
+    @apply border-b-4 border-[#8b0000] pb-2 mb-5 text-2xl text-[#8b0000] font-serif w-1/2 text-center mx-auto;
+}
+
+/* .wine img */
+.wine img {
+    @apply w-[150px] h-auto rounded-lg block mx-auto mb-2.5 transition-transform ease-in-out duration-300;
+}
+
+/* .wine img:hover */
+.wine img:hover {
+    @apply scale-[1.7];
+}
+
+/* .wine p */
+.wine p {
+    @apply min-h-[60px] overflow-hidden text-ellipsis;
+}
+
+/* .wine-section */
+.wine-section {
+    @apply opacity-0 translate-x-[-100px] transition-all duration-[1000ms] ease-out will-change-[opacity,transform];
+}
+
+/* .white-wine */
+.white-wine {
+    @apply translate-x-[100px];
+}
+
+/* .wine-section.show */
+.wine-section.show {
+    @apply opacity-100 translate-x-0;
+}
+
+/* Dark mode styles */
+/* .dark-mode */
+.dark-mode {
+    @apply bg-[#1e1e1e] text-[#f5f5f5];
+}
+
+/* .dark-mode .wine */
+.dark-mode .wine {
+    @apply bg-[#2c2c2c] text-white;
+}
+
+/* .dark-mode .wine h3 */
+.dark-mode .wine h3 {
+    @apply text-[#ffcc66];
+}
+
+/* .dark-mode .about-block p */
+.dark-mode .about-block p {
+    @apply text-white bg-[#2c2c2c];
+}
+
+/* body.dark-mode #about */
+body.dark-mode #about {
+    @apply bg-[#2c2c2c] text-white;
+}
+
+/* body.dark-mode #testimonials */
+body.dark-mode #testimonials {
+    @apply bg-[#2c2c2c] text-white;
+}
+
+/* body.dark-mode #testimonials p */
+body.dark-mode #testimonials p {
+    @apply bg-[#2c2c2c] text-white;
+}
+
+/* body.dark-mode #testimonials h2 */
+body.dark-mode #testimonials h2 {
+    @apply text-white;
+}
+
+/* body.dark-mode #about h2 */
+body.dark-mode #about h2 {
+    @apply text-white;
+}
+
+/* body.dark-mode #wines h2 */
+body.dark-mode #wines h2 {
+    @apply text-white;
+}
+
+/* body.dark-mode #newsletter h2 */
+body.dark-mode #newsletter h2 {
+    @apply text-white;
+}
+
+/* body.dark-mode #contact h2 */
+body.dark-mode #contact h2 {
+    @apply text-white;
+}
+
+/* body.dark-mode.wine-page */
+body.dark-mode.wine-page {
+    @apply bg-[#1e1e1e] text-[#f5f5f5];
+}
+
+/* body.dark-mode .wine-page .wine */
+body.dark-mode .wine-page .wine {
+    @apply bg-[#2c2c2c] text-white;
+}
+
+/* body.dark-mode .wine-page .wine h3 */
+body.dark-mode .wine-page .wine h3 {
+    @apply text-[#ffcc66];
+}
+
+/* body.dark-mode .wine-page h1 */
+body.dark-mode .wine-page h1 {
+    @apply text-[#ffcc66];
+}
+
+/* body.dark-mode .wine-page p */
+body.dark-mode .wine-page p {
+    @apply text-white;
+}
+
+/* body.dark-mode .wine-page .wine-description */
+body.dark-mode .wine-page .wine-description {
+    @apply bg-[#2c2c2c] text-white;
+}
+
+/* body.dark-mode nav */
+body.dark-mode nav {
+    @apply bg-[#8b0000] text-white;
+}
+
+/* body.dark-mode nav a */
+body.dark-mode nav a {
+    @apply text-white;
+}
+
+/* body.dark-mode footer */
+body.dark-mode footer {
+    @apply bg-[#2c2c2c] text-white;
+}
+
+/* body.dark-mode footer a */
+body.dark-mode footer a {
+    @apply text-[#ffcc66];
+}
+
+/* body.dark-mode .wine-page img */
+body.dark-mode .wine-page img {
+    @apply rounded-lg shadow-[0_0_10px_rgba(255,_255,_255,_0.1)];
+}
+
+/* .booking-form-container * */
+.booking-form-container * {
+    @apply box-border;
+}
+
+/* .booking-form-container */
+.booking-form-container {
+    @apply max-w-[500px] bg-white p-8 rounded-lg shadow-lg mx-auto my-12 text-left border-2 border-[#8b0000];
+}
+
+/* .booking-form-container label */
+.booking-form-container label {
+    @apply font-bold block mb-1 mt-2 text-[#8b0000];
+}
+
+/* .booking-form-container input, .booking-form-container select */
+.booking-form-container input,
+.booking-form-container select {
+    @apply w-full p-3 mb-4 border border-[#8b0000] rounded-md text-lg bg-[#f9f9f9];
+}
+
+/* .booking-form-container button */
+.booking-form-container button {
+    @apply w-full bg-[#8b0000] text-white border-none p-3 text-xl rounded-md cursor-pointer mt-4;
+}
+
+/* .booking-form-container button:hover */
+.booking-form-container button:hover {
+    @apply bg-[#a30000];
+}
+
+/* .booking-form-footer */
+.booking-form-footer {
+    @apply bg-[#8b0000] text-white text-center p-4 mt-5 rounded-md;
+}
+
+/* Error Message Styling */
+.error-message {
+    @apply bg-[#f8d7da] text-[#721c24] border border-[#f5c6cb] p-4 rounded-md mt-2 text-center text-base;
+}
+
+/* AI Recommendation Section */
+#ai-recommendation {
+    @apply p-10 bg-[#f9f9f9] rounded-xl max-w-[600px] mx-auto text-center;
+}
+
+/* Input Field for AI Recommendation */
+#customerInput {
+    @apply w-full p-4 mt-5 border-2 border-[#ccc] rounded-xl text-lg bg-white text-[#333] box-border transition-all duration-300 ease-in-out;
+}
+
+/* Focus Effect on Input Field */
+#customerInput:focus {
+    @apply border-[#5c4d7d] shadow-md outline-none;
+}
+
+/* AI Recommendation Button */
+#ai-recommendation button {
+    @apply bg-[#a30000] text-white py-4 px-8 mt-5 rounded-xl text-xl cursor-pointer transition-colors duration-300 ease-in-out;
+}
+
+/* Hover Effect for AI Recommendation Button */
+#ai-recommendation button:hover {
+    @apply bg-[#6d1206];
+}
+
+/* Display Result of AI Recommendation */
+#descriptionResult {
+    @apply mt-5 text-xl text-[#333] leading-6;
+}
+
+/* Aligning Textarea and Button in AI Section */
+textarea, #ai-recommendation button {
+    @apply block w-full mx-auto;
+}
+
+/* Testimonials Section */
+#testimonials {
+    @apply bg-[#faf3e0] p-10 rounded-xl max-w-[800px] mx-auto text-center;
+}
+
+/* Testimonials Heading */
+#testimonials h2 {
+    @apply border-b-4 border-[#8b0000] pb-2 mb-5 text-2xl text-[#8b0000] font-serif;
+}
+
+/* Testimonials Paragraphs */
+#testimonials p {
+    @apply text-xl text-[#333] leading-6 my-2 py-2 px-4 border-l-4 border-[#8b0000] bg-white rounded-xl transition-all duration-300 ease-in-out;
+}
+
+/* Hover Effect for Testimonials */
+#testimonials p:hover {
+    @apply translate-x-2;
+}
+
+/* Author Name in Testimonials */
+#testimonials p span {
+    @apply block italic text-[#8b0000] mt-3;
+}
+
+/* About Section */
+#about {
+    @apply bg-[#faf3e0] p-[40px_30px] max-w-[900px] mx-auto text-center rounded-[12px] transition-transform duration-300 ease-in-out hover:translate-y-[-5px];
+}
+
+/* About Section Header */
+#about h2 {
+    @apply border-b-4 border-[#8b0000] pb-2 mb-5 text-2xl text-[#8b0000] font-serif;
+}
+
+/* About Section Blocks */
+.about-block {
+    @apply flex items-center justify-center mb-10 opacity-0 transform translate-x-[100px] transition-all duration-[1600ms] ease-out;
+}
+
+/* Alternating Animation Effects for About Blocks */
+.about-block:nth-child(1) {
+    @apply transform translate-x-[-100px];
+}
+
+.about-block:nth-child(2) {
+    @apply transform translate-x-[100px];
+}
+
+.about-block:nth-child(3) {
+    @apply transform translate-x-[-100px];
+}
+
+/* Show Effect for About Blocks */
+.about-block.show {
+    @apply opacity-100 transform translate-x-0;
+}
+
+/* About Section Image */
+.about-img {
+    @apply w-full max-w-[200px] mr-5 rounded-[8px] shadow-[0_4px_8px_rgba(0,0,0,0.1)];
+}
+
+/* About Section Text */
+.about-block p {
+    @apply max-w-[600px] text-lg leading-[1.6] m-0 p-0;
+}
+
+
+/* .ai-page */
+.ai-page {
+    @apply flex flex-col min-h-screen;
+}
+
+/* .wrapper */
+.wrapper {
+    @apply flex-1;
+}
+
+/* Footer Styles */
+.ai-page footer {
+    @apply bg-[#8b0000] text-white text-center py-4 w-full mt-auto;
+}
+
+/* Success Popup Notification */
+.success-popup {
+    @apply fixed top-2 left-1/2 transform -translate-x-1/2 bg-[#4CAF50] text-white py-2 px-5 rounded-md text-lg shadow-md transition-opacity duration-500 ease-in-out opacity-100 z-50;
+}
+
+/* Wine Pages Section */
+.wine-page {
+    @apply bg-[#faf3e0] text-[#5a3e2b] py-10 px-5 text-center font-serif max-w-screen-xl mx-auto;
+}
+
+.wine-page h1 {
+    @apply text-3xl text-[#8b0000] font-serif mb-5 tracking-wide;
+}
+
+.wine-page h2 {
+    @apply text-2xl text-[#8b0000] font-serif mb-5 py-2 border-b-4 border-[#8b0000] w-full text-left bg-[#faf3e0];
+}
+
+.wine-page p {
+    @apply text-lg leading-6 text-[#5a3e2b] mb-8 font-serif;
+}
+
+.wine-page img {
+    @apply w-full max-w-[600px] rounded-lg my-5 shadow-md;
+}
+
+.wine-page .wine-description {
+    @apply bg-white py-7 px-8 rounded-lg shadow-md mx-auto max-w-[800px];
+}
+
+/* Wine Specific Styles for H1 */
+.wine-page.cabernet-sauvignon h1,
+.wine-page.merlot h1,
+.wine-page.pinot-noir h1,
+.wine-page.chardonnay h1,
+.wine-page.sauvignon-blanc h1,
+.wine-page.riesling h1 {
+    @apply text-white;
+}
+
+
+/* Section */
+section {
+    @apply mb-10;
+}
+
+/* Section Heading (h2) */
+section h2 {
+    @apply text-2xl text-[#8b0000] mb-2;
+}
+
+/* Section List (ul) */
+section ul {
+    @apply list-disc pl-5 text-left;
+}
+
+/* Section List Items (li) */
+section ul li {
+    @apply text-lg leading-8 mb-2;
+}
+
