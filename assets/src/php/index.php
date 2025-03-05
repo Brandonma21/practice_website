@@ -1,5 +1,4 @@
-<?php include '/Users/brandonmarshall/Documents/wine-website/assets\src/src/php/header.php'; ?>
-
+<?php include __DIR__ . '/header.php'; ?>
 <section id="home" class="hero">
     <div class="hero-content">
         <h2>Experience the Taste of Perfection 🍷</h2>
@@ -10,4 +9,4 @@
     </div>
 </section>
 
-<?php include __DIR__ . '/assets\src/src/php/footer.php';?>
+<?php include __DIR__ . '/footer.php'; ?>

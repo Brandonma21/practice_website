@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include __DIR__ . '/assets/src/php/header.php'; ?>
 
 <section id="home" class="hero">
     <div class="hero-content">
@@ -10,4 +10,4 @@
     </div>
 </section>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/assets/src/php/footer.php'; ?>

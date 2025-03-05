@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VineHaven Wines</title>
-    <link href="output.css" rel="stylesheet">
-
+    <title>Wine Website</title>
+    <link rel="stylesheet" href="/dist/output.css"> <!-- Ensure the correct path to the CSS file -->
 </head>
 <body>
     <header>
