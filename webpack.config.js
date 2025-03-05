@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/index.js',  // Path to your main JS file (it can be different)
+  entry: './src/index.js', // Entry file
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -10,19 +10,32 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/, // Load CSS files
         use: [
-        'style-loader',
-        'css-loader',
-        'postcss-loader',
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
         ],
+      },
+      {
+        test: /\.js$/, // Enable ES6+ JavaScript support
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
+      filename: 'output.css',
     }),
   ],
-  mode: 'development',  // Change to 'production' for minified output
+  mode: 'production', // Change to 'production' for live builds
+  resolve: {
+    extensions: ['.js', '.css'], // Make sure Webpack knows to resolve these types
+  },
 };

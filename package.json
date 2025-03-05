@@ -15,9 +15,22 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/brandonma21/practice_website/issues"
   },
-  "homepage": "https://github.com/brandonma21/practice_website#readme"
+  "homepage": "https://github.com/brandonma21/practice_website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.3",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.17",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
 }
